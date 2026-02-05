@@ -4,10 +4,11 @@ import aiohttp
 from pyrogram import Client, filters
 from pyrogram.types import Message
 from terabox_downloader import TeraboxFile
+import os
 
-API_ID = 123456
-API_HASH = "YOUR_API_HASH"
-BOT_TOKEN = "YOUR_BOT_TOKEN"
+API_ID = int(os.environ.get("10006297"))
+API_HASH = os.environ.get("8bb6a09b00d359d6081fcfa3ba7db0a4")
+BOT_TOKEN = os.environ.get("8363193433:AAEO4op7PZV5TymEdqRaNXkK5fPEhy0KdN4")
 
 app = Client("terabox_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN, workers=8)
 
